@@ -1,0 +1,23 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  brand: MyString
+  name: MyString
+  style: MyString
+  hop: MyString
+  yeast: MyString
+  malts: MyString
+  ibu: MyString
+  alcohol: MyString
+  blg: MyString
+
+two:
+  brand: MyString
+  name: MyString
+  style: MyString
+  hop: MyString
+  yeast: MyString
+  malts: MyString
+  ibu: MyString
+  alcohol: MyString
+  blg: MyString
