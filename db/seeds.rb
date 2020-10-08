@@ -3,5 +3,9 @@
 end
 
 User.create(email: 'jacksonmorgan@hey.com', password_digest: '1111')
+User.create(email: 'lkane1499@gmail.com', password_digest: '2222')
+User.create(email: 'kevin@buyavette.net', password_digest: '3333')
+User.create(email: 'karengrant1011@gmail.com', password_digest: '4444')
+User.create(email: 'smudge@cute.org', password_digest: '5555')
 
 puts 'Seeds Created Successfully'
