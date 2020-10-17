@@ -10,10 +10,14 @@ class BeersController < ApplicationController
   end
 
   def create
-    # current_user.beer.create
+    beer = Beer.find_by(id: params[:id])
 
-    beer = Beer.create(id: params[:id], brand: params[:brand], name: params[:name], style: params[:style], hop: params[:hop], yeast: params[:yeast], malts: params[:malts], ibu: params[:ibu], alcohol: params[:alcohol], blg: params[:blg])
-    
-    render json: beer
+    if current_user
+      if current_user.find_by(id: params[:id]) == false
+        beer.user_id = current_user.id
+      end
+    end
+
+    render json: current_user.beers
   end
 end
