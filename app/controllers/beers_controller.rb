@@ -9,6 +9,11 @@ class BeersController < ApplicationController
     render json: beer
   end
 
+  def show_user_beers
+    beers = User.beers.find_by(user_id: params[:id])
+    render json: beers
+  end
+
   def create
     beer = Beer.find_by(id: params[:id])
 
