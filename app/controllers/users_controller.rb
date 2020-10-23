@@ -4,7 +4,8 @@ class UsersController < ApplicationController
   end
 
   def create
-    @new_user = User.create(user_params)
+    new_user = User.create(user_params)
+    render json: new_user
   end
   
   def index
