@@ -1,4 +1,4 @@
-User.create(name: 'Jackson', email: 'jacksonmorgan@hey.com', phone: '7069746486', password_digest: '1111')
+User.create(name: 'Jackson', email: 'jack@hey.com', phone: '7069746486', password_digest: '1111')
 User.create(name: 'Lauren', email: 'lkane1499@gmail.com', phone: '', password_digest: '2222')
 User.create(name: 'Kav', email: 'kevin@buyavette.net', phone: '', password_digest: '3333')
 User.create(name: 'Kern', email: 'karengrant1011@gmail.com', phone: '', password_digest: '4444')

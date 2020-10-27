@@ -5,13 +5,9 @@ class BeersController < ApplicationController
   end
 
   def show
-    beer = Beer.find_by(id: params[:id])
-    render json: beer
-  end
-
-  def show_user_beers
-    beers = User.beers.find_by(user_id: params[:id])
-    render json: beers
+    beers = current_user.beers
+    render json: beers 
+    byebug
   end
 
   def create
