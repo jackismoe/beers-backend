@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   resources :users, only: [:index, :new, :show, :create, :destroy, :edit, :update] do
     resources :beers, only: [:index, :new, :show, :create, :destroy, :edit, :update]
   end
-  resources :users_beers, only: [:index]
+  resources :all_beers, only: [:index]
   
   get '/', to: 'sessions#new'
   post '/', to: 'sessions#create'

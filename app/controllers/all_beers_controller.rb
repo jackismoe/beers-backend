@@ -1,7 +1,6 @@
 class AllBeersController < ApplicationController
   def index
-    user = User.find_by(email: session[:email])
-    beers = user.beers
+    beers = Beer.all
     render json: beers
   end
 end
