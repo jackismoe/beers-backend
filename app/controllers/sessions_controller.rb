@@ -7,6 +7,8 @@ class SessionsController < ApplicationController
     if user
       session[:user_id] = user.id
       render json: user
+    elsif params['session'] == {}
+      session[:user_id] = nil
     end
   end
 
