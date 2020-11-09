@@ -18,6 +18,28 @@ class UsersController < ApplicationController
     render json: UserSerializer.new(user).to_serialized_json
   end
 
+  def update
+    user = User.find_by(id: params[:id])
+    if params[:name] != ''
+      user.name = params[:name]
+    end
+    
+    if params[:email] != ''
+      user.email = params[:email]
+    end
+    
+    if params[:phone] != ''
+      user.phone = params[:phone]
+    end
+    
+    if params[:password_digest] != '' 
+      user.password_digest = params[:password_digest]
+    end
+    
+    user.save
+    render json: user
+  end
+
   private
   def user_params
     params[:user].permit(:name, :email, :phone, :password_digest)
