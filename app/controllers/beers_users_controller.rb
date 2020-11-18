@@ -1,11 +1,8 @@
 class BeersUsersController < ApplicationController
   def destroy
-    params.permit!
-    x = User.find_by(id: params[:session])
-    y = Beer.find_by(brand: params[:beerBrand], name: params[:beerName])
-    z = BeersUser.find_by(beer_id: y.id, user_id: x.id)
-    z.delete
-    render json: y
+    beer = BeersUser.find(params[:id])
+    beer.user_id = 0
+    beer.save
   end
 
   def create
