@@ -1,5 +1,6 @@
 class BeersUsersController < ApplicationController
   def destroy
+    
     beer = BeersUser.find(params[:id])
     beer.user_id = 0
     beer.save
