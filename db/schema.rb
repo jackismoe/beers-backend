@@ -12,32 +12,35 @@
 
 ActiveRecord::Schema.define(version: 2020_10_17_154411) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "beers", force: :cascade do |t|
-    t.string "brand"
-    t.string "name"
-    t.string "style"
-    t.string "hop"
-    t.string "yeast"
-    t.string "malts"
-    t.string "ibu"
-    t.string "alcohol"
-    t.string "blg"
+    t.text "brand"
+    t.text "name"
+    t.text "style"
+    t.text "hop"
+    t.text "yeast"
+    t.text "malts"
+    t.text "ibu"
+    t.text "alcohol"
+    t.text "blg"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "beers_users", force: :cascade do |t|
-    t.integer "user_id", null: false
-    t.integer "beer_id", null: false
+    t.bigint "user_id", null: false
+    t.bigint "beer_id", null: false
     t.index ["beer_id"], name: "index_beers_users_on_beer_id"
     t.index ["user_id"], name: "index_beers_users_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "name"
-    t.string "email"
-    t.string "phone"
-    t.string "password_digest"
+    t.text "name"
+    t.text "email"
+    t.text "phone"
+    t.text "password_digest"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
