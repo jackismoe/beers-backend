@@ -15,7 +15,6 @@ gem 'puma', '~> 4.1'
 # Use Active Model has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
-gem 'sqlite3', '~> 1.3.6'
 
 gem 'faker'
 # Use Active Storage variant
