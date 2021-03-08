@@ -12,9 +12,6 @@
 
 ActiveRecord::Schema.define(version: 2020_10_17_154411) do
 
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-
   create_table "beers", force: :cascade do |t|
     t.text "brand"
     t.text "name"
@@ -30,8 +27,8 @@ ActiveRecord::Schema.define(version: 2020_10_17_154411) do
   end
 
   create_table "beers_users", force: :cascade do |t|
-    t.bigint "user_id", null: false
-    t.bigint "beer_id", null: false
+    t.integer "user_id", null: false
+    t.integer "beer_id", null: false
     t.index ["beer_id"], name: "index_beers_users_on_beer_id"
     t.index ["user_id"], name: "index_beers_users_on_user_id"
   end
