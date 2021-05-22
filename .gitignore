@@ -31,4 +31,8 @@
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 
-/db/seeds.rb
+/db/seeds.rb/public/packs
+/public/packs-test
+/node_modules
+yarn-debug.log*
+.yarn-integrity
