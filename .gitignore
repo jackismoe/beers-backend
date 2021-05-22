@@ -32,3 +32,4 @@
 /config/master.key
 
 /db/seeds.rb
+node_modules
